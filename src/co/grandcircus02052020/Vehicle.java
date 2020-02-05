@@ -41,11 +41,7 @@ public class Vehicle {
 	}
 
 	public void setYear(int year) {
-		if (year > 1884 && year < 2021) {
 		this.year = year;
-		} else {
-			System.out.println("Invalid year, year was not set.");
-		}
 	}
 
 	public double getPrice() {
@@ -53,11 +49,7 @@ public class Vehicle {
 	}
 
 	public void setPrice(double price) {
-		if (price > 0) {
-			this.price = price;
-		} else {
-			System.out.println("Invalid price, price was not set.");
-		}
+		this.price = price;
 	}
 	
 	@Override

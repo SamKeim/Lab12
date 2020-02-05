@@ -6,15 +6,18 @@ import java.util.Scanner;
 public class VehicleMain {
 	
 	public static void main(String[] args) {
+		// Declare variables
 		Scanner scnr = new Scanner(System.in);
 		int userInt = 0;
 		ArrayList<Vehicle> inventory = new ArrayList<Vehicle>();
 		
+		// Welcome statement and initial variable setting
 		System.out.println("Welcome to the Grand Circus Motors - Controllers Console");
 		System.out.println("How many vehicles are you entering:");
 		userInt = scnr.nextInt();
 		scnr.nextLine();
 		
+		// Loop for entering vehicles
 		for (int i = 1; i <= userInt; i++) {
 			System.out.println("Enter Vehicle #" + i + " Make:");
 			String chooseMake = scnr.nextLine();
@@ -26,6 +29,7 @@ public class VehicleMain {
 			inventory.add(new Vehicle(chooseMake, chooseModel, chooseYear, choosePrice));
 		}
 		
+		// Prints out list
 		for (Vehicle vehicle : inventory) {
 			System.out.println(vehicle);
 		}
